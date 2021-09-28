@@ -1,3 +1,15 @@
+/**
+    * @description      : 
+    * @author           : Michael
+    * @group            : 
+    * @created          : 28/09/2021 - 17:59:05
+    * 
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 28/09/2021
+    * - Author          : Michael
+    * - Modification    : 
+**/
 import React from "react";
 
 const WeatherData = ({ countryName, cityName, weatherInfo }) => {

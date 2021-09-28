@@ -1,3 +1,15 @@
+/**
+    * @description      : 
+    * @author           : Michael
+    * @group            : 
+    * @created          : 28/09/2021 - 17:59:09
+    * 
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 28/09/2021
+    * - Author          : Michael
+    * - Modification    : 
+**/
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -8,6 +20,8 @@ import WeatherData from "./WeatherData";
 import DateTime from "./DateTime";
 import Tagline from "./Tagline";
 import Footer from "./Footer";
+
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 const Main = () => {
   const [weather, setWeather] = useState();
@@ -35,12 +49,13 @@ const Main = () => {
         <DateTime />
         <WeatherSearch apiCall={api_call} />
         {weather && (
-          <WeatherData
+          <FadeIn> <WeatherData
             // obtainin the values from the api and passing it to WeatherData.jsx as props
             countryName={weather.data.sys.country}
             cityName={weather.data.name}
             weatherInfo={weather.data.main}
           />
+          </FadeIn>
         )}
       </Content>
       <Footer />
